@@ -15,4 +15,6 @@
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.targets" Condition="'$(VSToolsPath)' != ''" />
+  <!-- Dirty hack to prevent 'dotnet publish' to attempt to publish the project and fail -->
+  <Target Name="CIPublish" />
 </Project>
